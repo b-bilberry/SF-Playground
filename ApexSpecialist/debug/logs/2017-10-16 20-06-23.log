@@ -1,0 +1,51 @@
+41.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: List<sObject> s = [SELECT Owner.Id OwnerId, CALENDAR_YEAR(CloseDate) Year, CALENDAR_MONTH(CloseDate) Month, SUM(Amount) TotalAmount
+Execute Anonymous: FROM Opportunity WHERE StageName = 'Closed Won'
+Execute Anonymous: GROUP BY Owner.Id, CALENDAR_YEAR(CloseDate), CALENDAR_MONTH(CloseDate)];
+Execute Anonymous: 
+Execute Anonymous: system.debug(s);
+20:06:22.1 (1038294)|USER_INFO|[EXTERNAL]|0050O00000782Ui|bchernichko@curious-raccoon-209964.com|Moscow Standard Time|GMT+03:00
+20:06:22.1 (1057733)|EXECUTION_STARTED
+20:06:22.1 (1060907)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+20:06:22.1 (1210837)|VARIABLE_SCOPE_BEGIN|[1]|s|List<SObject>|true|false
+20:06:22.1 (1339531)|HEAP_ALLOCATE|[72]|Bytes:3
+20:06:22.1 (1375514)|HEAP_ALLOCATE|[77]|Bytes:152
+20:06:22.1 (1390611)|HEAP_ALLOCATE|[342]|Bytes:408
+20:06:22.1 (1403631)|HEAP_ALLOCATE|[355]|Bytes:408
+20:06:22.1 (1415397)|HEAP_ALLOCATE|[467]|Bytes:48
+20:06:22.1 (1442247)|HEAP_ALLOCATE|[139]|Bytes:6
+20:06:22.1 (1461496)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+20:06:22.1 (1550962)|STATEMENT_EXECUTE|[1]
+20:06:22.1 (1553067)|STATEMENT_EXECUTE|[1]
+20:06:22.1 (1556535)|HEAP_ALLOCATE|[1]|Bytes:231
+20:06:22.1 (1578472)|HEAP_ALLOCATE|[1]|Bytes:4
+20:06:22.1 (1616728)|HEAP_ALLOCATE|[50]|Bytes:5
+20:06:22.1 (1639374)|HEAP_ALLOCATE|[56]|Bytes:5
+20:06:22.1 (1645787)|HEAP_ALLOCATE|[64]|Bytes:7
+20:06:22.1 (1968725)|SOQL_EXECUTE_BEGIN|[1]|Aggregations:0|SELECT Owner.Id OwnerId, CALENDAR_YEAR(CloseDate) Year, CALENDAR_MONTH(CloseDate) Month, SUM(Amount) TotalAmount FROM Opportunity WHERE StageName = 'Closed Won' GROUP BY Owner.Id, CALENDAR_YEAR(CloseDate), CALENDAR_MONTH(CloseDate)
+20:06:22.1 (21580224)|SOQL_EXECUTE_END|[1]|Rows:1
+20:06:22.1 (21626066)|HEAP_ALLOCATE|[1]|Bytes:8
+20:06:22.1 (21645523)|HEAP_ALLOCATE|[1]|Bytes:78
+20:06:22.1 (21705867)|HEAP_ALLOCATE|[1]|Bytes:8
+20:06:22.1 (21761639)|VARIABLE_ASSIGNMENT|[1]|s|[{"OwnerId":"0050O00000782UiQAI","Year":2015,"Month":9,"TotalAmount":3645000.0}]|0x3879086c
+20:06:22.1 (21768380)|STATEMENT_EXECUTE|[5]
+20:06:22.1 (21828274)|USER_DEBUG|[5]|DEBUG|(AggregateResult:{OwnerId=0050O00000782UiQAI, Year=2015, Month=9, TotalAmount=3645000.0})
+20:06:22.21 (21867459)|CUMULATIVE_LIMIT_USAGE
+20:06:22.21 (21867459)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 18 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+20:06:22.21 (21867459)|CUMULATIVE_LIMIT_USAGE_END
+
+20:06:22.1 (21904144)|CODE_UNIT_FINISHED|execute_anonymous_apex
+20:06:22.1 (22726088)|EXECUTION_FINISHED

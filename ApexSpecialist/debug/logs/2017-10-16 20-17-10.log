@@ -1,0 +1,43 @@
+41.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: Map<Id, AggregateResult> m = new Map<Id, AggregateResult>();
+Execute Anonymous: 
+Execute Anonymous: system.debug(m);
+20:17:10.1 (1054852)|USER_INFO|[EXTERNAL]|0050O00000782Ui|bchernichko@curious-raccoon-209964.com|Moscow Standard Time|GMT+03:00
+20:17:10.1 (1075231)|EXECUTION_STARTED
+20:17:10.1 (1078681)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+20:17:10.1 (1202584)|VARIABLE_SCOPE_BEGIN|[1]|m|Map<Id,AggregateResult>|true|false
+20:17:10.1 (1309816)|HEAP_ALLOCATE|[72]|Bytes:3
+20:17:10.1 (1354324)|HEAP_ALLOCATE|[77]|Bytes:152
+20:17:10.1 (1367155)|HEAP_ALLOCATE|[342]|Bytes:408
+20:17:10.1 (1380756)|HEAP_ALLOCATE|[355]|Bytes:408
+20:17:10.1 (1394620)|HEAP_ALLOCATE|[467]|Bytes:48
+20:17:10.1 (1419474)|HEAP_ALLOCATE|[139]|Bytes:6
+20:17:10.1 (1438663)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+20:17:10.1 (1516384)|STATEMENT_EXECUTE|[1]
+20:17:10.1 (1518677)|STATEMENT_EXECUTE|[1]
+20:17:10.1 (1543284)|HEAP_ALLOCATE|[1]|Bytes:4
+20:17:10.1 (1590985)|VARIABLE_ASSIGNMENT|[1]|m|{}|0x58d67a4b
+20:17:10.1 (1597349)|STATEMENT_EXECUTE|[3]
+20:17:10.1 (1626677)|HEAP_ALLOCATE|[50]|Bytes:5
+20:17:10.1 (1643239)|HEAP_ALLOCATE|[56]|Bytes:5
+20:17:10.1 (1650036)|HEAP_ALLOCATE|[64]|Bytes:7
+20:17:10.1 (1691650)|USER_DEBUG|[3]|DEBUG|{}
+20:17:10.1 (1732266)|CUMULATIVE_LIMIT_USAGE
+20:17:10.1 (1732266)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+20:17:10.1 (1732266)|CUMULATIVE_LIMIT_USAGE_END
+
+20:17:10.1 (1770318)|CODE_UNIT_FINISHED|execute_anonymous_apex
+20:17:10.1 (2611306)|EXECUTION_FINISHED

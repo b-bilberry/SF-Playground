@@ -1,0 +1,2 @@
+[{"_id":"55d66226726b611100aaf748","replacement":false,"quantity":2,"name":"Converter","maintenanceperiod":180,"lifespan":120,"cost":3000,"sku":"100010"},
+{"_id":"55d66226726b611100aaf749","replacement":true,"quantity":75,"name":"Ball Valve 8 cm","maintenanceperiod":0,"lifespan":0,"cost":42,"sku":"100011"}]
