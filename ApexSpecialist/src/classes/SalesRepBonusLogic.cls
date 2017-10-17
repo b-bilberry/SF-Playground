@@ -54,10 +54,12 @@ public with sharing class SalesRepBonusLogic {
 
 			decimal currentBonus = currentSalesBonuses.get(currentBonusPeriod);
 			if (currentBonus == null) {
-				currentSalesBonuses.put(currentBonusPeriod, BonusAmount);
+				currentBonus = 0;
 			}
 
 			if ((currentBonus + BonusAmount) < MaxBonusAmountPerMonth) {
+				currentSalesBonuses.put(currentBonusPeriod, currentBonus + BonusAmount);
+
 				bonusRecToCreate.add(new Bonus__c(
 					Sales_Rep__c = opportunity.OwnerId,
 					Amount__c = BonusAmount,
