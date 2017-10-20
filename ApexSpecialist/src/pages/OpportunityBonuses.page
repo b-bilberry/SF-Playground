@@ -1,0 +1,21 @@
+<apex:page showHeader="true" sidebar="true" controller="OpportunityBonusController">
+	<apex:form>
+		Sales representative:
+		<apex:selectList value="{!Filter_SalesRepId}" multiselect="false" size="1">
+			<apex:selectOptions value="{!salesRepresentatives}" />
+			<apex:actionSupport event="onchange" reRender="bonuses_list"/>
+		</apex:selectList>
+		<apex:pageBlock title="List of bonuses" id="bonuses_list">
+			<apex:pageBlockTable value="{! bonuses }" var="bonus"  rendered="{!(bonuses.size > 0)}">
+				<apex:column value="{! bonus.Sales_Rep__r.Name}"></apex:column>
+				<apex:column value="{! bonus.Opportunity__r.Type }"></apex:column>
+				<apex:column value="{! bonus.Opportunity__r.CloseDate}"></apex:column>
+				<apex:column value="{! bonus.Opportunity__r.Amount}"></apex:column>
+				<apex:column value="{! bonus.Opportunity__r.StageName}"></apex:column>
+				<apex:column value="{! bonus.Amount__c}"></apex:column>
+			</apex:pageBlockTable>
+			<apex:outputText rendered="{!(bonuses.size == 0)}">There are no records about bonuses</apex:outputText>
+		</apex:pageBlock>
+	</apex:form>
+	
+</apex:page>
