@@ -1,16 +1,2 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-This is test #2
-=======
 This is important changes in file #2
 The third change
->>>>>>> 1531f2c... The third commit
-=======
-This is important changes in file #2
-The third change
->>>>>>> 1531f2c... The third commit
-=======
-This is important changes in file #2
-The third change
->>>>>>> 1531f2c... The third commit
